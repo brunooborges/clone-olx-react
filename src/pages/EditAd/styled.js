@@ -81,7 +81,8 @@ export const PageArea = styled.div`
 			margin-left: 20px;
 
 			.ad {
-				display: block;
+				display: flex;
+				flex-direction: column;
 				border: 1px solid #fff;
 				margin: 10px;
 				text-decoration: none;
@@ -95,7 +96,7 @@ export const PageArea = styled.div`
 					background-color: #fff;
 					border-radius: 5px;
 					box-shadow: 0px 0px 4px #999;
-					margin: 20px 0;
+					margin: 10px 0;
 				}
 
 				.box--padding {
@@ -107,16 +108,16 @@ export const PageArea = styled.div`
 				}
 
 				.adImage {
-					width: 320px;
-					height: 320px;
-					margin-right: 20px;
+					align-self: center;
+					width: 400px;
+					height: 400px;
 
 					.each-slide img {
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						background-size: cover;
-						height: 320px;
+						height: 400px;
 					}
 				}
 
@@ -127,7 +128,7 @@ export const PageArea = styled.div`
 
 					h2 {
 						margin: 0;
-						margin-top: 20px;
+						margin-top: 10px;
 					}
 					small {
 						color: #999;

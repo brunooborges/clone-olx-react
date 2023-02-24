@@ -14,8 +14,7 @@ const EditAd = () => {
 	const navigate = useNavigate();
 	const { id } = useParams();
 
-	const ImgField = useRef();
-	const ImagesField = useRef();
+	const fileField = useRef();
 
 	const [adInfo, setAdInfo] = useState({});
 	const [categories, setCategories] = useState([]);
@@ -69,11 +68,10 @@ const EditAd = () => {
 			fData.append('priceneg', priceneg);
 			fData.append('desc', desc);
 			fData.append('cat', cat);
-			fData.append('img', ImgField.current.files[0]);
 
-			if (ImagesField.current.files.length > 0) {
-				for (let i = 0; i < ImagesField.current.files.length; i++) {
-					fData.append('images', ImagesField.current.files[i]);
+			if (fileField.current.files.length > 0) {
+				for (let i = 0; i < fileField.current.files.length; i++) {
+					fData.append('img', fileField.current.files[i]);
 				}
 			}
 
@@ -105,8 +103,9 @@ const EditAd = () => {
 
 	return (
 		<PageContainer>
+			{console.log(adInfo.images)}
+			{console.log(adInfo)}
 			<PageArea>
-				{console.log(adInfo)}
 				<PageTitle>Editar anúncio</PageTitle>
 				{error && <ErrorMessage>{error}</ErrorMessage>}
 				<div className="editArea--ad">
@@ -192,24 +191,14 @@ const EditAd = () => {
 										onChange={(e) => setDesc(e.target.value)}></textarea>
 								</div>
 							</label>
-							<label className="area">
-								<div className="area--title">Alterar Imagens</div>
-								<div className="area--input">
-									<input
-										type="file"
-										disabled={disabled}
-										ref={ImagesField}
-										multiple
-									/>
-								</div>
-							</label>
+
 							<label className="area">
 								<div className="area--title">Adicionar Imagem</div>
 								<div className="area--input">
 									<input
 										type="file"
 										disabled={disabled}
-										ref={ImgField}
+										ref={fileField}
 										multiple
 									/>
 								</div>
