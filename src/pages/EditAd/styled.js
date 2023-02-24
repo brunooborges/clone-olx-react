@@ -16,16 +16,15 @@ export const PageArea = styled.div`
 			form {
 				.area {
 					display: flex;
-					align-items: center;
 					padding: 10px;
-					max-width: 600px;
+					width: 100%;
 
 					.area--title {
-						width: 200px;
 						text-align: right;
 						padding-right: 20px;
 						font-weight: bold;
 						font-size: 14px;
+						width: 150px;
 					}
 					.area--input {
 						flex: 1;
@@ -79,7 +78,7 @@ export const PageArea = styled.div`
 			justify-content: center;
 			align-items: center;
 			flex: 1;
-			margin-right: 20px;
+			margin-left: 20px;
 
 			.ad {
 				display: block;
@@ -148,6 +147,41 @@ export const PageArea = styled.div`
 			.ad.inactive {
 				background-color: #eee;
 				border: 1px solid #ccc;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		.editArea--ad {
+			flex-direction: column;
+
+			.leftSide {
+				form {
+					.area {
+						flex-direction: column;
+
+						.area--title {
+							width: 100%;
+							text-align: left;
+							margin-bottom: 10px;
+						}
+						.area--input {
+							width: 100%;
+
+							button {
+								width: 100%;
+								padding: 10px;
+							}
+						}
+					}
+				}
+			}
+
+			.rightSide {
+				margin: 20px 0;
+				.ad {
+					margin: 0;
+				}
 			}
 		}
 	}

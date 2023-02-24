@@ -66,7 +66,7 @@ export const HeaderArea = styled.div`
 				font-size: 14px;
 				text-decoration: none;
 				cursor: pointer;
-				ountline: 0;
+				outline: 0;
 
 				&:hover {
 					color: #999;
@@ -83,6 +83,26 @@ export const HeaderArea = styled.div`
 					background-color: #e57706;
 				}
 			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		& {
+			height: auto;
+		}
+		.container {
+			flex-direction: column;
+		}
+		.logo {
+			justify-content: center;
+			margin: 20px 0;
+		}
+		nav ul {
+			flex-direction: column;
+			height: auto;
+		}
+		nav li {
+			margin: 5px 20px;
 		}
 	}
 `;

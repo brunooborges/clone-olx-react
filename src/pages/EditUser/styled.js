@@ -41,19 +41,40 @@ export const PageArea = styled.div`
 				input[type='checkbox'] {
 					width: 13px;
 				}
+			}
+		}
+		.defaultButton {
+			background-color: #0089ff;
+			border: 0;
+			outline: 0;
+			padding: 5px 10px;
+			border-radius: 4px;
+			color: #fff;
+			font-size: 15px;
+			cursor: pointer;
 
-				.defaultButton {
-					background-color: #0089ff;
-					border: 0;
-					outline: 0;
-					padding: 5px 10px;
-					border-radius: 4px;
-					color: #fff;
-					font-size: 15px;
-					cursor: pointer;
+			&:hover {
+				background-color: #006fce;
+			}
+		}
+	}
 
-					&:hover {
-						background-color: #006fce;
+	@media (max-width: 600px) {
+		form {
+			.area {
+				flex-direction: column;
+
+				.area--title {
+					width: 100%;
+					text-align: left;
+					margin-bottom: 10px;
+				}
+				.area--input {
+					width: 100%;
+
+					button {
+						width: 100%;
+						padding: 10px;
 					}
 				}
 			}

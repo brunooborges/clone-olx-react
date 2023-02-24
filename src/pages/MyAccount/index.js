@@ -66,12 +66,13 @@ const MyAccount = () => {
 											className="defaultButton">
 											Editar
 										</Link>
-										<div className="itemName">{i.title}</div>
+										<div className="itemName">Título: {i.title}</div>
 										<div className="itemPrice">
-											{i.priceNegotiable && 'Preço Negociável'}
-											{!i.priceNegotiable && `| R$ ${i.price} |`}
+											Preço:
+											{i.priceNegotiable && ' Preço Negociável'}
+											{!i.priceNegotiable && ` R$ ${i.price}`}
 										</div>
-										<div className="itemName">{i.status === true ? 'Ativo' : 'Inativo'}</div>
+										<div className="itemStatus">Status: {i.status === true ? 'Ativo' : 'Inativo'}</div>
 									</div>
 								</Item>
 							))}

@@ -129,11 +129,38 @@ export const Item = styled.div`
 		.itemName {
 			font-weight: bold;
 			margin: 5px;
+			border-right: 1px solid #000;
+			padding-right: 10px;
 		}
 
 		.itemPrice {
 			font-weight: bold;
 			margin: 5px;
+			border-right: 1px solid #000;
+			padding-right: 10px;
+		}
+		.itemStatus {
+			font-weight: bold;
+			margin: 5px;
+			padding-right: 10px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.editArea--list {
+			width: 25%;
+		}
+		.ad {
+			flex-direction: column;
+
+			.itemName,
+			.itemPrice {
+				border: 0;
+			}
+
+			.defaultButton {
+				align-self: flex-start;
+			}
 		}
 	}
 `;
