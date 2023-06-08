@@ -2,6 +2,8 @@
 
 Projeto em React de um clone inspirado na OLX, com uso de API para criação de usuários e anúncios.
 
+React Project of a clone inspired by OLX, using API to create users and ads.
+
 ## Available Scripts
 
 In the project directory, you can run:
